@@ -17,9 +17,17 @@
   .bottom{
     border-bottom: 0px;
   }
-  
-  
-  
+  .winner{
+    background-color: rgba(255, 0, 0, 0.416);
+  }
+  .tie{
+    background-color: rgba(128, 128, 128, 0.479);
+  }
+  #msg{
+    margin-bottom: 2em;
+    font-size: 1.2em;
+
+  }
   #board{
   
     display: grid;
