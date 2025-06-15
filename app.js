@@ -1,3 +1,15 @@
+/*
+Accelerated Tic Tac Toe game | Tic Tac Two
+Author: Maripi Maluenda
+Date: June 14 2025
+Description: Simple tic tac toe game in which the first player gets an extra move
+
+Game Logic:
+    checkWin, checkAlmost, cpuTurn
+Game UI | Presentation:
+    generateBoard, handleClick, drawWin
+*/
+
 function createGame() {
     const boardSize = 3;
     const defaultState = {
@@ -116,6 +128,12 @@ function createGame() {
         htmlElement.cells[0][2].innerHTML = "O";
         boardState.turn = 3;
     }
+    /**
+     * Makes a move for the computer based on the state of the game
+     * @param {Object} boardState - The current state of the game
+     * @param {Object} htmlElement - DOM elements for rendering updates
+     * @returns {void} Updates both boardState and the Display
+     */
     function cpuTurn(boardState, htmlElement) {
         if (boardState.turn % 2 == 1) {
             //CPu went second. Reactive game
@@ -182,6 +200,12 @@ function createGame() {
         }
         htmlElement.msg.innerHTML = boardState.messages.start;
     }
+    /**
+     * Checks if there is a line that can be completed
+     * @param {Object} boardState - The current state of the game
+     * @param {string} player - 'X' for human or 'O' for computer
+     * @returns {[number, number]} Coordenates of the cell to either block or complete the line
+     */
     function checkAlmost(boardState, player) {
         let size = boardState.size;
         let coors = [-1, -1];
@@ -246,6 +270,12 @@ function createGame() {
         }
         return [-1, -1];
     }
+    /**
+     * Checks if the given player has won the came
+     * @param {Object} boardState - The current state of the game
+     * @param {string} player - 'X' for human or 'O' for computer
+     * @returns {void} Updates boardState.win based on findings
+     */
     function checkWin(boardSt, player) {
         let numRows = boardSt.size;
         let complete = true;

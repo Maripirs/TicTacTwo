@@ -1,45 +1,48 @@
-.cell{
+.cell {
     border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
-  
-  }
-  .top{
+    font-size: 4em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.top {
     border-top: 0px;
-  }
-  .left{
+}
+.left {
     border-left: 0px;
-  }
-  .right{
+}
+.right {
     border-right: 0px;
-  }
-  .bottom{
+}
+.bottom {
     border-bottom: 0px;
-  }
-  .winner{
+}
+.winner {
     background-color: rgba(255, 0, 0, 0.416);
-  }
-  .tie{
+    font-weight: bold;
+}
+.tie {
     background-color: rgba(128, 128, 128, 0.479);
-  }
-  #msg{
-    margin-bottom: 2em;
-    font-size: 1.2em;
+}
 
-  }
-  #board{
-  
+#board {
     display: grid;
     height: 70vmin;
     width: 70vmin;
     margin: 8vmin;
-  
-  }
-  body{
+}
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
-  }
+}
+#msg {
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+#btn {
+    font-size: 1em;
+    padding: 0.5em;
+}
