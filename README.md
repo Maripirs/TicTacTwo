@@ -1,4 +1,4 @@
-# TicTacTwo - Accelerated Tic Tac Roe
+# TicTacTwo - Accelerated Tic Tac Toe
 A web based implementation of an *accelerated* version of Tic-Tac-Toe
 
 ## What's Different?
